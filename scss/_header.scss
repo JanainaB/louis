@@ -1,0 +1,52 @@
+header {
+    padding: 2.5rem 0;
+    .container {
+        nav {
+            @include flex(row, center, space-between);
+            ul {
+                @include flex(row, center, space-between);
+                li {
+                    &:not(:first-child) {
+                        margin-left: 1.5rem;
+                    }
+                    a {
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 0%;
+                            height: 0.05rem;
+                            background: $text-color;
+                            transition: 0.5s;
+                        }
+                        &:hover {
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 100%;
+                                height: 0.05rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .link {
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0%;
+                    height: 0.05rem;
+                    background: $text-color;
+                    transition: 0.5s;
+                }
+                &:hover::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 0.05rem;
+                    background: $text-color;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}

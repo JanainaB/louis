@@ -1,0 +1,167 @@
+.hero {
+    margin-top: 8rem;
+    @include flex(row, center, space-between);
+    .hero-name {
+        width: 25rem;
+        z-index: 1;
+    }
+    .hero-banner {
+        width: 100%;
+        max-width: 46.87rem;
+    }
+}
+
+.about {
+    @include flex(row, center, space-between);
+    position: relative;
+    z-index: 99;
+    padding-top: 10.12rem;
+    .social-media {
+        width: 100%;
+        max-width: 29.37rem;
+        position: relative;
+        ul {
+            display: flex;
+            padding-top: 1rem;
+            li {
+                padding-right: 1rem;
+            }
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 21rem;
+            height: 33.5rem;
+            background-color: $featured-color;
+            position: absolute;
+            top: -4.25rem;
+            left: -4.125rem;
+            z-index: -1;
+        }
+    }
+    .about-text {
+        padding-left: 3.5rem;
+        h2 {
+            width: 100%;
+            max-width: 20rem;
+            &::after {
+                content: '';
+                display: block;
+                width: 23.62rem;
+                height: 2rem;
+                background-color: $brand-color;
+                margin-top: -1.25rem;
+            }
+        }
+        .about-item {
+            @include flex(row, flex-start, space-between);
+            padding-top: 4.37rem;
+            .guitar {
+                width: 100%;
+                max-width: 7.68rem;
+            }
+            .text {
+                max-width: 32.5rem;
+                padding-left: 3rem;
+                p {
+                    &:last-child {
+                        margin-top: 2rem;
+                        position: relative;
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 44rem;
+                            height: 10rem;
+                            background-color: $featured-color;
+                            margin-left: 3.125rem;
+                            margin-top: -5.37rem;
+                            // position: absolute;
+                            // bottom: 0;
+                            // right: 0;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.album {
+    .album-cover {
+        margin-top: 10.31rem;
+        background-image: url(../images/bg-album.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+    }
+    .btn {
+        max-width: 16rem;
+        display: block;
+        margin: -1.68rem auto 0 auto;
+        background-color: $brand-color;
+        color: $text-color;
+        text-align: center;
+        padding: 1rem 0;
+        transition: all .3s;
+        position: relative;
+        z-index: 1;
+        font-weight: bold;
+        text-transform: uppercase;
+        &:hover {
+            background-color: $hover-color;
+        }
+    }
+}
+
+.newsletter {
+    @include flex(row, center, space-between);
+    padding-top: 11rem;
+    position: relative;
+    .newsletter-cover {
+        width: 69%;
+    }
+    .newsletter-content {
+        padding-left: 5rem;
+        h2 {
+            max-width: 25rem;
+            &::after {
+                content: '';
+                display: block;
+                width: 15.06rem;
+                height: 2rem;
+                background-color: $brand-color;
+                margin-left: 2.25rem;
+                margin-top: -1.75rem;
+            }
+        }
+        form {
+            max-width: 25rem;
+            display: flex;
+            justify-content: baseline;
+            min-height: 3rem;
+            margin-top: 3.93rem;
+            input {
+                min-width: 70%;
+                font-family: 'Open sans', sans-serif;
+                font-size: 1rem;
+                color: #453E3E;
+                padding-left: 1rem;
+            }
+            button {
+                min-width: 30%;
+                background-color: $brand-color;
+                font-family: 'Open sans', sans-serif;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: $text-color;
+                cursor: pointer;
+                transition: all .3s;
+                &:hover {
+                    background-color: $hover-color;
+                }
+            }
+        }
+    }
+}
