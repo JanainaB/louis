@@ -26,16 +26,35 @@ h2 {
 h1 {
     font-size: 6.75rem;
     line-height: 8.125rem;
-    // margin-right: 136px;
-    // position: absolute;
-    // top: 0;
-    // left: 36px;
-    // z-index: 1;
+    @include responsive(51.25rem) {
+        font-size: 3rem;
+        line-height: 3rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    @include responsive(30rem) {
+        text-align: center;
+    }
+}
+
+h1::selection,
+h2::selection,
+.liinks::selection,
+p::selection,
+a::selection,
+img::selection,
+body::selection {
+    background-color: $hover-color;
 }
 
 h2 {
     font-size: 3rem;
     line-height: 3.62rem;
+    @include responsive(51.25rem) {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 
 .links {
